@@ -16,7 +16,6 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from datetime import datetime
 
 
-# from helpers import classify_image, read_labels, set_input_tensor
 
 app = FastAPI()
 
@@ -27,7 +26,7 @@ FACE_DETECTION_URL = "/v1/vision/face"
 OBJ_DETECTION_URL = "/v1/vision/detection"
 
 
-odNet = jetson.inference.detectNet("ssd-mobilenet-v2")   #, sys.argv, opt.threshold)
+odNet = jetson.inference.detectNet("ssd-mobilenet-v2")   
 fdNet = jetson.inference.detectNet("facenet")
 
 
